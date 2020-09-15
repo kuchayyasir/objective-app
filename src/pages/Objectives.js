@@ -200,8 +200,9 @@ class Objectives extends Component {
                                                     onOk={this.handleOk}
                                                     onCancel={this.handleCancel}
                                                 >
-                                                    <Form {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish}>
-                                                    { (showAddEndPoint) ?  <>
+                                                    <Form {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish}  initialValues={{ names: [""] }}>
+                                                    { (showAddEndPoint) ? 
+                                                     <>
                                                         <Form.List name="names">
                                                             {(fields, { add, remove }) => {
                                                                 return (
